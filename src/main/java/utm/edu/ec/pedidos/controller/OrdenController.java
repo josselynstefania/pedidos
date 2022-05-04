@@ -25,6 +25,13 @@ public class OrdenController {
 
     @DeleteMapping
     public void deleteOrden(@RequestParam String codor) {
-        ordenService.deleteOrden(codor);
+        ordenService.findByCodor(codor);
     }
-}
+
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
+    public List<Ordenes> findAll() {
+        return ordenService.finAll();
+
+    }
+    }
+

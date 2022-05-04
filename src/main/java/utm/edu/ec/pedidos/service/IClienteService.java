@@ -7,4 +7,5 @@ public interface IClienteService {
     void saveCliente(Cliente cliente);
     List<Cliente> findByCi(String ci);
     void deleteCliente(String ci);
+    List<Cliente> finAll();
 }

@@ -27,5 +27,9 @@ public class CategoriaController {
     public void deleteCategoria(@RequestParam String codcat) {
         categoriaService.deleteCategoria(codcat);
     }
-}
 
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
+    public List<Categoria> findAll() {
+        return categoriaService.finAll();
+    }
+}

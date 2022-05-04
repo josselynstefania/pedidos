@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import utm.edu.ec.pedidos.entity.Empleado;
 import utm.edu.ec.pedidos.service.IEmpleadoService;
-import utm.edu.ec.pedidos.service.IOrdenService;
 import java.util.List;
 
 @RestController
@@ -27,5 +26,10 @@ public class EmpleadoController {
     @DeleteMapping
     public void deleteEmpleado(@RequestParam String codem) {
         empleadoService.deleteEmpleado(codem);
+    }
+
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
+    public List<Empleado> findAll() {
+        return empleadoService.finAll();
     }
 }

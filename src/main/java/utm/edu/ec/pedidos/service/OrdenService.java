@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 @Transactional
-public class OrdenService implements IOrdenService{
+public class OrdenService implements IOrdenService {
 
     @Autowired
     IOrdenRepository ordenRepository;
@@ -29,5 +29,10 @@ public class OrdenService implements IOrdenService{
         List<Ordenes> ordenes = ordenRepository.findByCodor(codor);
         ordenes.forEach(x -> {ordenRepository.deleteAll();
         });
+    }
+
+    @Override
+    public List<Ordenes> finAll() {
+        return ordenRepository.findAll();
     }
 }

@@ -31,4 +31,9 @@ public class ClienteService implements IClienteService {
         cliente.forEach(x -> {clienteRepository.deleteAll();
         });
     }
+
+    @Override
+    public List<Cliente> finAll() {
+        return clienteRepository.findAll();
+    }
 }

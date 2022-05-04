@@ -30,4 +30,9 @@ public class DetalleOrdenService implements IDetalleOrdenServide {
         detalleOrden.forEach(x -> {detalleOrdenRepository.deleteAll();
         });
     }
+
+    @Override
+    public List<DetalleOrden> finAll() {
+        return detalleOrdenRepository.findAll();
+    }
 }

@@ -27,4 +27,10 @@ public class DetalleOrdenController {
     public void deleteDetalleOrden(@RequestParam String cordet) {
         detalleOrdenServide.findByCordet(cordet);
     }
+
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
+    public List<DetalleOrden> findAll() {
+        return detalleOrdenServide.finAll();
+    }
 }
+

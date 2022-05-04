@@ -30,5 +30,10 @@ public class ProductoService implements IProductoService {
         producto.forEach(x->{productoRepository.deleteAll();
         });
     }
+
+    @Override
+    public List<Producto> finAll() {
+        return productoRepository.findAll();
+    }
 }
 

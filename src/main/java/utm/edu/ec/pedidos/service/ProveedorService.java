@@ -30,4 +30,9 @@ public class ProveedorService implements IProveedorService {
         proveedor.forEach(x -> {proveedorRepository.deleteAll();
         });
     }
+
+    @Override
+    public List<Proveedor> finAll() {
+        return proveedorRepository.findAll();
+    }
 }

@@ -33,4 +33,9 @@ public class CategoriaSevice implements ICategoriaService{
         categoria.forEach(x -> {categoriaRepository.deleteAll();
         });
     }
+
+    @Override
+    public List<Categoria> finAll() {
+        return categoriaRepository.findAll();
+    }
 }

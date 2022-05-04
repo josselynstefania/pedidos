@@ -26,4 +26,9 @@ public class ProductoController {
     @DeleteMapping
     public void deleteProducto(@RequestParam String codpro) {
         productoService.deleteProducto(codpro);}
+
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
+    public List<Producto> findAll() {
+        return productoService.finAll();
+    }
 }

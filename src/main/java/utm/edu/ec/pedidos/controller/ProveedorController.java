@@ -11,19 +11,28 @@ import java.util.List;
 @RequestMapping(path = "/proveedor")
 public class ProveedorController {
 
-        @Autowired
-        private IProveedorService proveedorService;
+    @Autowired
+    private IProveedorService proveedorService;
 
-        @PostMapping()
-        public void saveProveedor(@RequestBody Proveedor proveedor){
-            proveedorService.saveProveedor(proveedor);
-        }
-
-        @GetMapping
-        public List<Proveedor> findByCodprov(@RequestParam String codprov){
-            return proveedorService.findByCodprov(codprov);
-        }
-
-        @DeleteMapping
-        public void deleteProveedor(@RequestParam String codprov){ proveedorService.deleteProveedor(codprov);}
+    @PostMapping()
+    public void saveProveedor(@RequestBody Proveedor proveedor) {
+        proveedorService.saveProveedor(proveedor);
     }
+
+    @GetMapping
+    public List<Proveedor> findByCodprov(@RequestParam String codprov) {
+        return proveedorService.findByCodprov(codprov);
+    }
+
+    @DeleteMapping
+    public void deleteProveedor(@RequestParam String codprov) {
+        proveedorService.deleteProveedor(codprov);
+    }
+
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
+    public List<Proveedor> findAll() {
+        return proveedorService.finAll();
+    }
+}
+
+

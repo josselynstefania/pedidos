@@ -3,6 +3,7 @@ package utm.edu.ec.pedidos.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import utm.edu.ec.pedidos.entity.Empleado;
+import utm.edu.ec.pedidos.repository.EmpleadoRepository;
 import utm.edu.ec.pedidos.repository.IEmpleadoRepository;
 import javax.transaction.Transactional;
 import java.util.List;
@@ -29,5 +30,10 @@ public class EmpleadoService implements IEmpleadoService{
         List<Empleado> empleado = empleadoRepository.findByCodem(codem);
         empleado.forEach(x -> {empleadoRepository.deleteAll();
         });
+    }
+
+    @Override
+    public List<Empleado> finAll() {
+        return empleadoRepository.findAll();
     }
 }

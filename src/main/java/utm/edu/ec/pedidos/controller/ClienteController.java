@@ -3,9 +3,7 @@ package utm.edu.ec.pedidos.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import utm.edu.ec.pedidos.entity.Cliente;
-import utm.edu.ec.pedidos.entity.Empleado;
 import utm.edu.ec.pedidos.service.IClienteService;
-import utm.edu.ec.pedidos.service.IEmpleadoService;
 
 import java.util.List;
 
@@ -30,5 +28,12 @@ public class ClienteController {
     public void deleteCliente(@RequestParam String ci) {
         clienteService.findByCi(ci);
     }
+
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
+    public List<Cliente> findAll() {
+        return clienteService.finAll();
+
+    }
 }
+
 

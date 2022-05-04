@@ -3,7 +3,6 @@ package utm.edu.ec.pedidos.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Data
 @Entity
@@ -16,7 +15,7 @@ public class Ordenes {
     private String codor;
 
     @Column(nullable = false, length = 50)
-    private Date dateorden;
+    private String dateorden;
 
     @Column(nullable = false, length = 50)
     private String descuento;

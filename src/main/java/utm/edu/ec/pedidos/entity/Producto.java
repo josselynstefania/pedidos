@@ -14,7 +14,7 @@ public class Producto {
     @Column(nullable = false, length = 10)
     private String codpro;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false, length = 150)
     private String descripcion;
 
     @Column(nullable = false, length = 50)

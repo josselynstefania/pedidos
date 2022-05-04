@@ -3,7 +3,6 @@ package utm.edu.ec.pedidos.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Data
 @Entity
@@ -25,7 +24,7 @@ public class Empleado {
     private String address;
 
     @Column(nullable = false, length = 25)
-    private Date fechanaci;
+    private String fechanaci;
 
     @Column(nullable = false, length = 25)
     private String gender;

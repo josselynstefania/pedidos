@@ -1,4 +1,7 @@
 package utm.edu.ec.pedidos.repository;
 
-public interface IOrdenRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import utm.edu.ec.pedidos.entity.Ordenes;
+
+public interface IOrdenRepository extends JpaRepository<Ordenes, Integer>, OrdenRepository{
 }

@@ -1,7 +1,9 @@
 package utm.edu.ec.pedidos.controller;
 
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import utm.edu.ec.pedidos.entity.DetalleOrden;
 import utm.edu.ec.pedidos.entity.Ordenes;
 import utm.edu.ec.pedidos.service.IOrdenService;
 import java.util.List;
@@ -31,7 +33,11 @@ public class OrdenController {
     @RequestMapping(value = "/findAll", method = RequestMethod.GET)
     public List<Ordenes> findAll() {
         return ordenService.finAll();
+    }
 
+    @PutMapping
+    public void updateOrden(@RequestBody Ordenes ordenes){
+        ordenService.updateOrden(ordenes);
     }
     }
 

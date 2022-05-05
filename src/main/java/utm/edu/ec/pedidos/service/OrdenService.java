@@ -35,4 +35,9 @@ public class OrdenService implements IOrdenService {
     public List<Ordenes> finAll() {
         return ordenRepository.findAll();
     }
+
+    @Override
+    public Ordenes updateOrden(Ordenes ordenes) {
+        return ordenRepository.save(ordenes);
+    }
 }

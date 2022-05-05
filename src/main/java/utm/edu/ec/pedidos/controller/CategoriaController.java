@@ -32,4 +32,9 @@ public class CategoriaController {
     public List<Categoria> findAll() {
         return categoriaService.finAll();
     }
+
+    @PutMapping
+    public Categoria updateCategoria(@RequestBody Categoria categoria){
+        return categoriaService.updateCategoria(categoria);
+    }
 }

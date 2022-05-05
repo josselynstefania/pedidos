@@ -32,5 +32,10 @@ public class DetalleOrdenController {
     public List<DetalleOrden> findAll() {
         return detalleOrdenServide.finAll();
     }
+
+    @PutMapping
+    public DetalleOrden updateDetalleOrden(@RequestBody DetalleOrden detalleOrden){
+        return detalleOrdenServide.updateDetalleOrden(detalleOrden);
+    }
 }
 

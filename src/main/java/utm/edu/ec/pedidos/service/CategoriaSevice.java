@@ -3,9 +3,7 @@ package utm.edu.ec.pedidos.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import utm.edu.ec.pedidos.entity.Categoria;
-import utm.edu.ec.pedidos.entity.Empleado;
 import utm.edu.ec.pedidos.repository.ICategoriaRepository;
-import utm.edu.ec.pedidos.repository.IEmpleadoRepository;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -37,5 +35,10 @@ public class CategoriaSevice implements ICategoriaService{
     @Override
     public List<Categoria> finAll() {
         return categoriaRepository.findAll();
+    }
+
+    @Override
+    public Categoria updateCategoria(Categoria categoria) {
+       return categoriaRepository.save(categoria);
     }
 }

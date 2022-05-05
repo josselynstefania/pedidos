@@ -24,10 +24,10 @@ public class Producto {
     private Integer cantidad;
 
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name ="id_proveedor"))
+    @JoinColumn(name = "idproveedor", foreignKey = @ForeignKey(name ="idproveedor"))
     private Proveedor proveedor;
 
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name ="id_categoria"))
+    @JoinColumn(name = "idcategoria", foreignKey = @ForeignKey(name ="idcategoria"))
     private Categoria categoria;
 }

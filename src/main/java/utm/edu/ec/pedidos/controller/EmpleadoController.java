@@ -32,4 +32,9 @@ public class EmpleadoController {
     public List<Empleado> findAll() {
         return empleadoService.finAll();
     }
+
+    @PutMapping
+    public Empleado updateEmpleado(@RequestBody Empleado empleado){
+        return empleadoService.updateEmpleado(empleado);
+    }
 }

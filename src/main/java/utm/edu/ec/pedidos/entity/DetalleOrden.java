@@ -18,11 +18,11 @@ public class DetalleOrden {
     private String cantidad;
 
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name ="id_producto"))
+    @JoinColumn(name = "idproducto", foreignKey = @ForeignKey(name ="idproducto"))
     private Producto producto;
 
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name ="id_orden"))
+    @JoinColumn(name= "idorden",foreignKey = @ForeignKey(name ="idorden"))
     private Ordenes ordenes;
 
 }

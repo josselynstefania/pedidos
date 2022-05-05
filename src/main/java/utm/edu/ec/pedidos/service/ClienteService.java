@@ -36,4 +36,9 @@ public class ClienteService implements IClienteService {
     public List<Cliente> finAll() {
         return clienteRepository.findAll();
     }
+
+    @Override
+    public Cliente updateCliente(Cliente cliente) {
+        return clienteRepository.save(cliente);
+    }
 }

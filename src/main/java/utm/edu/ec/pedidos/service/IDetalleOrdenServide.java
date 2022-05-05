@@ -1,6 +1,5 @@
 package utm.edu.ec.pedidos.service;
 
-import utm.edu.ec.pedidos.entity.Cliente;
 import utm.edu.ec.pedidos.entity.DetalleOrden;
 import java.util.List;
 
@@ -9,4 +8,5 @@ public interface IDetalleOrdenServide {
     List<DetalleOrden> findByCordet(String cordet);
     void deleteCategoria(String cordet);
     List<DetalleOrden> finAll();
+    DetalleOrden updateDetalleOrden(DetalleOrden detalleOrden);
 }

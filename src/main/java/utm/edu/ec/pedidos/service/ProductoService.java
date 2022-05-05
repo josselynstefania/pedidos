@@ -35,5 +35,10 @@ public class ProductoService implements IProductoService {
     public List<Producto> finAll() {
         return productoRepository.findAll();
     }
+
+    @Override
+    public Producto updateProducto(Producto producto) {
+        return productoRepository.save(producto);
+    }
 }
 

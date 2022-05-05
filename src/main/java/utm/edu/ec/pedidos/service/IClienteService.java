@@ -8,4 +8,5 @@ public interface IClienteService {
     List<Cliente> findByCi(String ci);
     void deleteCliente(String ci);
     List<Cliente> finAll();
+    Cliente updateCliente(Cliente cliente);
 }

@@ -21,10 +21,10 @@ public class Ordenes {
     private String descuento;
 
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name ="idempleado"))
+    @JoinColumn(name = "idempleado", foreignKey = @ForeignKey(name ="idempleado"))
     private Empleado empleado;
 
     @ManyToOne
-    @JoinColumn(foreignKey = @ForeignKey(name ="idcliente"))
+    @JoinColumn(name = "idcliente", foreignKey = @ForeignKey(name ="idcliente"))
     private Cliente cliente;
 }

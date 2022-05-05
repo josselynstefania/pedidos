@@ -35,4 +35,9 @@ public class DetalleOrdenService implements IDetalleOrdenServide {
     public List<DetalleOrden> finAll() {
         return detalleOrdenRepository.findAll();
     }
+
+    @Override
+    public DetalleOrden updateDetalleOrden(DetalleOrden detalleOrden) {
+        return detalleOrdenRepository.save(detalleOrden);
+    }
 }

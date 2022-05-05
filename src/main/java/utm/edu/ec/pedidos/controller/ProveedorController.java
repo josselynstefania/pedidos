@@ -33,6 +33,12 @@ public class ProveedorController {
     public List<Proveedor> findAll() {
         return proveedorService.finAll();
     }
+
+    @PutMapping
+    public Proveedor updateProveedor(@RequestBody Proveedor proveedor){
+        return proveedorService.updateProveedor(proveedor);
+
+    }
 }
 
 

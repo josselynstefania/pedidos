@@ -30,5 +30,11 @@ public class ProductoController {
     @RequestMapping(value = "/findAll", method = RequestMethod.GET)
     public List<Producto> findAll() {
         return productoService.finAll();
+
+    }
+
+    @PutMapping
+    public Producto uodateProducto(@RequestBody Producto producto){
+        return productoService.updateProducto(producto);
     }
 }

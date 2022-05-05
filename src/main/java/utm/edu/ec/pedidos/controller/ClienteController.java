@@ -32,7 +32,11 @@ public class ClienteController {
     @RequestMapping(value = "/findAll", method = RequestMethod.GET)
     public List<Cliente> findAll() {
         return clienteService.finAll();
+    }
 
+    @PutMapping
+    public Cliente updateCliente(@RequestBody Cliente cliente){
+        return clienteService.updateCliente(cliente);
     }
 }
 

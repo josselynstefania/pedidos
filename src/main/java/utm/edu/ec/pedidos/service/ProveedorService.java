@@ -35,4 +35,9 @@ public class ProveedorService implements IProveedorService {
     public List<Proveedor> finAll() {
         return proveedorRepository.findAll();
     }
+
+    @Override
+    public Proveedor updateProveedor(Proveedor proveedor) {
+        return proveedorRepository.save(proveedor);
+    }
 }

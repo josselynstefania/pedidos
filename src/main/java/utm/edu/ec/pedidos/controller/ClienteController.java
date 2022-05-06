@@ -7,6 +7,7 @@ import utm.edu.ec.pedidos.service.IClienteService;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200/")
 @RestController
 @RequestMapping(path = "/cliente")
 public class ClienteController {
@@ -30,7 +31,7 @@ public class ClienteController {
     }
 
     @RequestMapping(value = "/findAll", method = RequestMethod.GET)
-    public List<Cliente> findAll() {
+    public List<Cliente> finAll() {
         return clienteService.finAll();
     }
 

@@ -7,6 +7,7 @@ import utm.edu.ec.pedidos.service.IProveedorService;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200/")
 @RestController
 @RequestMapping(path = "/proveedor")
 public class ProveedorController {
@@ -30,7 +31,7 @@ public class ProveedorController {
     }
 
     @RequestMapping(value = "/findAll", method = RequestMethod.GET)
-    public List<Proveedor> findAll() {
+    public List<Proveedor> finAll() {
         return proveedorService.finAll();
     }
 

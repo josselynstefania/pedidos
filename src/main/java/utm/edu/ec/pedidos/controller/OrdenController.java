@@ -8,6 +8,7 @@ import utm.edu.ec.pedidos.entity.Ordenes;
 import utm.edu.ec.pedidos.service.IOrdenService;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200/")
 @RestController
 @RequestMapping(path = "/orden")
 public class OrdenController {

@@ -6,6 +6,7 @@ import utm.edu.ec.pedidos.entity.Producto;
 import utm.edu.ec.pedidos.service.IProductoService;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200/")
 @RestController
 @RequestMapping(path = "/producto")
 public class ProductoController {
@@ -28,7 +29,7 @@ public class ProductoController {
         productoService.deleteProducto(codpro);}
 
     @RequestMapping(value = "/findAll", method = RequestMethod.GET)
-    public List<Producto> findAll() {
+    public List<Producto> finAll() {
         return productoService.finAll();
 
     }

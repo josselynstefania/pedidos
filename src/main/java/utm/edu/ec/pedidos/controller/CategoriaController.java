@@ -6,9 +6,10 @@ import utm.edu.ec.pedidos.entity.Categoria;
 import utm.edu.ec.pedidos.service.ICategoriaService;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200/")
 @RestController
 @RequestMapping(path = "/categoria")
-public class CategoriaController {
+public class CategoriaController{
 
     @Autowired
     private ICategoriaService categoriaService;
@@ -29,7 +30,7 @@ public class CategoriaController {
     }
 
     @RequestMapping(value = "/findAll", method = RequestMethod.GET)
-    public List<Categoria> findAll() {
+    public List<Categoria> finAll() {
         return categoriaService.finAll();
     }
 

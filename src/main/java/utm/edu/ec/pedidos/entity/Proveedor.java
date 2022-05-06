@@ -4,13 +4,14 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.UUID;
 
 @Data
 @Entity
 public class Proveedor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idproveedor;
+    private UUID idproveedor;
 
     @Column(nullable = false, length = 10)
     private String codprov;

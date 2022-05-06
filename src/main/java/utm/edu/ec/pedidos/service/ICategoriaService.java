@@ -10,4 +10,5 @@ public interface ICategoriaService {
     void deleteCategoria(String codcat);
     List<Categoria> finAll();
     Categoria updateCategoria(Categoria categoria);
+
 }

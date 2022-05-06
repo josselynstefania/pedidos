@@ -3,13 +3,14 @@ package utm.edu.ec.pedidos.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Data
 @Entity
 public class Empleado {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer idempleado;
+    private UUID idempleado;
 
     @Column(nullable = false, length = 10)
     private String codem;

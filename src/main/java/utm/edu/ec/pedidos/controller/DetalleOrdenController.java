@@ -6,6 +6,7 @@ import utm.edu.ec.pedidos.entity.DetalleOrden;
 import utm.edu.ec.pedidos.service.IDetalleOrdenServide;
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200/")
 @RestController
 @RequestMapping(path = "/detalleorden")
 public class DetalleOrdenController {
@@ -29,7 +30,7 @@ public class DetalleOrdenController {
     }
 
     @RequestMapping(value = "/findAll", method = RequestMethod.GET)
-    public List<DetalleOrden> findAll() {
+    public List<DetalleOrden> finAll() {
         return detalleOrdenServide.finAll();
     }
 
